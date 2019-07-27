@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+.board {
+  background-color: yellow;
+  box-shadow: 0 1px 6px rgba(255, 255, 255, 0.8),
+    0 4px 12px rgba(255, 255, 255, 0.5);
+  display: inline-block;
+}
+
+.tile {
+  border: 2px solid black;
+  background-color: rgb(182, 182, 182);
+  border-radius: 50%;
+  cursor: crosshair;
+  display: inline-block;
+}
+
+.red {
+  transition: background-color 0.3s ease-in;
+  background-color: red;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.24);
+}
+
+.black {
+  transition: background-color 0.3s ease-in;
+  background-color: black;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.24);
+}
+
+.tile.win {
+  border: 3px solid blue;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.8), 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.button {
+  background-color: blue;
+  box-shadow: 0 1px 6px rgba(255, 255, 255, 0.8);
+  border: 1px solid white;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.button:active {
+  transform: translateY(2px) scale(0.95);
+}
+
+@media screen and (min-width: 600px) {
+  .tile {
+    height: 70px;
+    width: 70px;
+    margin: 5px 5px;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 600px) {
+  .tile {
+    height: 50px;
+    width: 50px;
+    margin: 3.5px;
+  }
+}
+
+@media screen and (max-width: 450px) and (min-width: 325px) {
+  .tile {
+    height: 35px;
+    width: 35px;
+    margin: 2.5px;
+  }
+  .header {
+    font-size: 17px;
+  }
+  .message {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .tile {
+    height: 20px;
+    width: 20px;
+    margin: 1.25px;
+  }
+  .header {
+    font-size: 17px;
+  }
+  .message {
+    font-size: 17px;
+  }
+}
